@@ -7,22 +7,24 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { useState } from "react";
 import Accordian from "./components/Accordian";
 import Comment from "./components/comments/Comment";
+import ImageSlider from "./components/image-slider/ImageSlider";
 
 function App() {
   const [lang, setLang] = useState("en");
   return (
     <div>
-      <header className="text-3xl underline bg-black text-white text-center flex">
+      <header className="text-2xl  bg-black text-white text-center flex">
         Hello world!
-        <nav className="px-7">
+        <nav className="px-20 m-2 flex w-[800px] justify-between text-lg">
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/team">Team</a>
           <a href="/accordian">Accordian</a>
           <a href="/login">Login</a>
           <a href="/comments">Nested Comments</a>
+          <a href="/image-slider">Image Carousel</a>
         </nav>
-        <label className="px-10">
+        <label className="px-10 text-2xl">
           Select language:
           <select
             name=""
@@ -47,6 +49,7 @@ function App() {
 
           <Route path="/login" element={<Login />} />
           <Route path="/accordian" element={<Accordian />} />
+          <Route path="/image-slider" element={<ImageSlider />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

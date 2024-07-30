@@ -50,6 +50,118 @@ const Comment = () => {
             {
               name: "patan",
               disc: "good brother",
+              replies: [
+                {
+                  name: "kohli",
+                  disc: "ok ok boy",
+                  replies: [
+                    {
+                      name: "rama",
+                      disc: "very good boy",
+                      replies: [
+                        {
+                          name: "ranvir",
+                          disc: "ok ok boy",
+                        },
+                      ],
+                    },
+                    {
+                      name: "sitha",
+                      disc: "very good boy",
+                      replies: [
+                        {
+                          name: "hanuman",
+                          disc: "ok ok boy",
+                          replies: [
+                            {
+                              name: "kohli",
+                              disc: "ok ok boy",
+                              replies: [
+                                {
+                                  name: "rama",
+                                  disc: "very good boy",
+                                  replies: [
+                                    {
+                                      name: "ranvir",
+                                      disc: "ok ok boy",
+                                    },
+                                  ],
+                                },
+                                {
+                                  name: "sitha",
+                                  disc: "very good boy",
+                                  replies: [
+                                    {
+                                      name: "hanuman",
+                                      disc: "ok ok boy",
+                                      replies: [
+                                        {
+                                          name: "kohli",
+                                          disc: "ok ok boy",
+                                          replies: [
+                                            {
+                                              name: "rama",
+                                              disc: "very good boy",
+                                              replies: [
+                                                {
+                                                  name: "ranvir",
+                                                  disc: "ok ok boy",
+                                                },
+                                              ],
+                                            },
+                                            {
+                                              name: "sitha",
+                                              disc: "very good boy",
+                                              replies: [
+                                                {
+                                                  name: "hanuman",
+                                                  disc: "ok ok boy",
+                                                  replies: [
+                                                    {
+                                                      name: "kohli",
+                                                      disc: "ok ok boy",
+                                                      replies: [
+                                                        {
+                                                          name: "rama",
+                                                          disc: "very good boy",
+                                                          replies: [
+                                                            {
+                                                              name: "ranvir",
+                                                              disc: "ok ok boy",
+                                                            },
+                                                          ],
+                                                        },
+                                                        {
+                                                          name: "sitha",
+                                                          disc: "very good boy",
+                                                          replies: [
+                                                            {
+                                                              name: "hanuman",
+                                                              disc: "ok ok boy",
+                                                            },
+                                                          ],
+                                                        },
+                                                      ],
+                                                    },
+                                                  ],
+                                                },
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      ],
+                                    },
+                                  ],
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
             },
           ],
         },
