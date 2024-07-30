@@ -5,17 +5,21 @@ import Team from "./components/Team";
 import Login from "./components/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useState } from "react";
+import Accordian from "./components/Accordian";
 
 function App() {
   const [lang, setLang] = useState("en");
   return (
     <div>
-      <header className="text-3xl underline bg-black text-white text-center">
+      <header className="text-3xl underline bg-black text-white text-center flex">
         Hello world!
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/team">Team</a>
-        <a href="/login">Login</a>
+        <nav className="px-3">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/team">Team</a>
+          <a href="/accordian">Accordian</a>
+          <a href="/login">Login</a>
+        </nav>
         <label className="px-10">
           Select language:
           <select
@@ -39,6 +43,7 @@ function App() {
           </Route>
 
           <Route path="/login" element={<Login />} />
+          <Route path="/accordian" element={<Accordian />} />
         </Routes>
       </BrowserRouter>
     </div>
