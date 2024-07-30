@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useState } from "react";
 import Accordian from "./components/Accordian";
+import Comment from "./components/comments/Comment";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -13,12 +14,13 @@ function App() {
     <div>
       <header className="text-3xl underline bg-black text-white text-center flex">
         Hello world!
-        <nav className="px-3">
+        <nav className="px-7">
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/team">Team</a>
           <a href="/accordian">Accordian</a>
           <a href="/login">Login</a>
+          <a href="/comments">Nested Comments</a>
         </nav>
         <label className="px-10">
           Select language:
@@ -40,6 +42,7 @@ function App() {
           <Route element={<ProtectedRoute />}>
             <Route path="/about" element={<About lang={lang} />}></Route>
             <Route path="/team" element={<Team />}></Route>
+            <Route path="/comments" element={<Comment />}></Route>
           </Route>
 
           <Route path="/login" element={<Login />} />
