@@ -23,7 +23,7 @@ const PaginationComponent = ({ limit, handleRange, totalProdLen }) => {
       ))}
       <span
         onClick={() =>
-          setCurPage((cur) => (cur > noOfPages - 1 ? cur : cur + 1))
+          setCurPage((cur) => (cur >= noOfPages - 1 ? cur : cur + 1))
         }
       >
         NXT
