@@ -8,14 +8,15 @@ import { useState } from "react";
 import Accordian from "./components/Accordian";
 import Comment from "./components/comments/Comment";
 import ImageSlider from "./components/image-slider/ImageSlider";
+import Pagination from "./components/pagination/Pagination";
 
 function App() {
   const [lang, setLang] = useState("en");
   return (
     <div>
-      <header className="text-2xl  bg-black text-white text-center flex">
+      <header className="header text-2xl  bg-black text-white text-center flex  fixed w-[100%] z-50">
         Hello world!
-        <nav className="px-20 m-2 flex w-[800px] justify-between text-lg">
+        <nav className="px-20 m-2 flex w-[100%] space-x-4">
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/team">Team</a>
@@ -23,6 +24,7 @@ function App() {
           <a href="/login">Login</a>
           <a href="/comments">Nested Comments</a>
           <a href="/image-slider">Image Carousel</a>
+          <a href="/pagination">Pagination</a>
         </nav>
         <label className="px-10 text-2xl">
           Select language:
@@ -38,20 +40,23 @@ function App() {
           </select>
         </label>
       </header>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Body />} />
-          <Route element={<ProtectedRoute />}>
-            <Route path="/about" element={<About lang={lang} />}></Route>
-            <Route path="/team" element={<Team />}></Route>
-            <Route path="/comments" element={<Comment />}></Route>
-          </Route>
+      <div className="content pt-20">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Body />} />
+            <Route element={<ProtectedRoute />}>
+              <Route path="/about" element={<About lang={lang} />}></Route>
+              <Route path="/team" element={<Team />}></Route>
+              <Route path="/comments" element={<Comment />}></Route>
+            </Route>
 
-          <Route path="/login" element={<Login />} />
-          <Route path="/accordian" element={<Accordian />} />
-          <Route path="/image-slider" element={<ImageSlider />}></Route>
-        </Routes>
-      </BrowserRouter>
+            <Route path="/login" element={<Login />} />
+            <Route path="/accordian" element={<Accordian />} />
+            <Route path="/image-slider" element={<ImageSlider />}></Route>
+            <Route path="/pagination" element={<Pagination />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }
