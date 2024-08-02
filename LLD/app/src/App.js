@@ -9,6 +9,7 @@ import Accordian from "./components/Accordian";
 import Comment from "./components/comments/Comment";
 import ImageSlider from "./components/image-slider/ImageSlider";
 import Pagination from "./components/pagination/Pagination";
+import FePagination from "./components/fe_pagination/FePagination";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -24,7 +25,8 @@ function App() {
           <a href="/login">Login</a>
           <a href="/comments">Nested Comments</a>
           <a href="/image-slider">Image Carousel</a>
-          <a href="/pagination">Pagination</a>
+          <a href="/pagination">Offset Pagination</a>
+          <a href="/fe-pagination">FE Pagination</a>
         </nav>
         <label className="px-10 text-2xl">
           Select language:
@@ -54,6 +56,7 @@ function App() {
             <Route path="/accordian" element={<Accordian />} />
             <Route path="/image-slider" element={<ImageSlider />}></Route>
             <Route path="/pagination" element={<Pagination />} />
+            <Route path="/fe-pagination" element={<FePagination />} />
           </Routes>
         </BrowserRouter>
       </div>
