@@ -11,14 +11,15 @@ import ImageSlider from "./components/image-slider/ImageSlider";
 import Pagination from "./components/pagination/Pagination";
 import FePagination from "./components/fe_pagination/FePagination";
 import LiveChat from "./components/live-chat/LiveChat";
+import SearchUi from "./components/search-ui/SearchUi";
 
 function App() {
   const [lang, setLang] = useState("en");
   return (
     <div>
       <header className="header text-2xl  bg-black text-white text-center flex  fixed w-[100%] z-50">
-        Hello world!
-        <nav className="px-20 m-2 flex w-[100%] space-x-4">
+        <div className="text-xl">Hello World</div>
+        <nav className="px-20 m-2 flex w-[90%] space-x-4 text-sm">
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/team">Team</a>
@@ -29,6 +30,7 @@ function App() {
           <a href="/pagination">Offset Pagination</a>
           <a href="/fe-pagination">FE Pagination</a>
           <a href="/livechat">Live Chat</a>
+          <a href="/search-ui">Searchbar</a>
         </nav>
         <label className="px-10 text-2xl">
           Select language:
@@ -60,6 +62,7 @@ function App() {
             <Route path="/pagination" element={<Pagination />} />
             <Route path="/fe-pagination" element={<FePagination />} />
             <Route path="/livechat" element={<LiveChat />} />
+            <Route path="/search-ui" element={<SearchUi />} />
           </Routes>
         </BrowserRouter>
       </div>

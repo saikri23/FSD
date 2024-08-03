@@ -20,8 +20,7 @@ const ChatWindow = () => {
       const messages = await data.json();
       setMessages((newMsgs) => {
         let msgList = [...messages, ...newMsgs];
-        msgList = msgList.splice(0, 50);
-        console.log(msgList);
+        msgList = msgList.slice(0, 50);
         return msgList;
       });
     } catch (error) {
@@ -34,15 +33,19 @@ const ChatWindow = () => {
   };
 
   const handleClick = () => {
-    setMessages((msg) => [
-      {
-        firstName: inputVal,
-        email: "sai@gmail.com",
-        imageUrl:
-          "https://yt4.ggpht.com/ytc/AIdro_lMATeqMOu2FEhgSJSqllnFPMfB6uFvdUFCe23YJXVRxC4=s32-c-k-c0x00ffffff-no-rj",
-      },
-      ...msg,
-    ]);
+    setMessages((msg) => {
+      let msgList = [
+        {
+          firstName: inputVal,
+          email: "sai@gmail.com",
+          imageUrl:
+            "https://yt4.ggpht.com/ytc/AIdro_lMATeqMOu2FEhgSJSqllnFPMfB6uFvdUFCe23YJXVRxC4=s32-c-k-c0x00ffffff-no-rj",
+        },
+        ...msg,
+      ];
+      msgList = msgList.slice(0, 50);
+      return msgList;
+    });
   };
 
   return (
