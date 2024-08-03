@@ -17,6 +17,7 @@ const PaginationComponent = ({ limit, handleRange, totalProdLen }) => {
         <span
           className={`p-2 ${pn === curPage && "underline font-bold"}`}
           onClick={() => setCurPage(pn)}
+          key={pn}
         >
           {pn + 1}
         </span>
